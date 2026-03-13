@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.97 0.012 75;
+    --foreground: 0.18 0.02 55;
+    --card: 0.99 0.006 75;
+    --card-foreground: 0.18 0.02 55;
+    --popover: 0.99 0.006 75;
+    --popover-foreground: 0.18 0.02 55;
+    --primary: 0.55 0.14 38;
+    --primary-foreground: 0.99 0.006 75;
+    --secondary: 0.93 0.02 75;
+    --secondary-foreground: 0.35 0.04 55;
+    --muted: 0.93 0.015 75;
+    --muted-foreground: 0.52 0.03 55;
+    --accent: 0.88 0.04 75;
+    --accent-foreground: 0.28 0.03 55;
+    --destructive: 0.55 0.2 25;
+    --destructive-foreground: 0.99 0.006 75;
+    --border: 0.88 0.025 70;
+    --input: 0.88 0.025 70;
+    --ring: 0.55 0.14 38;
+    --radius: 0.5rem;
+    --chart-1: 0.55 0.14 38;
+    --chart-2: 0.65 0.12 200;
+    --chart-3: 0.72 0.1 140;
+    --chart-4: 0.68 0.15 60;
+    --chart-5: 0.58 0.18 300;
+    --sidebar: 0.95 0.015 75;
+    --sidebar-foreground: 0.18 0.02 55;
+    --sidebar-primary: 0.55 0.14 38;
+    --sidebar-primary-foreground: 0.99 0.006 75;
+    --sidebar-accent: 0.88 0.04 75;
+    --sidebar-accent-foreground: 0.28 0.03 55;
+    --sidebar-border: 0.88 0.025 70;
+    --sidebar-ring: 0.55 0.14 38;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Fraunces", Georgia, serif;
+  }
+  .font-body {
+    font-family: "Figtree", system-ui, sans-serif;
+  }
+}
